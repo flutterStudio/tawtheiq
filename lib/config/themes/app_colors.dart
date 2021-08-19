@@ -2,27 +2,32 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color _DARk_GREY = Color(0xFF232121);
-  static const Color _DARk_GREY_X = Color(0xFF030303);
+  static const Color _DARK_GREY = Color(0xFF232121);
+  static const Color _GREY_BLUE = Color(0xFF174674);
   static const Color _LIGHT_GREY = Color(0x33030303);
   static const Color _WHITE = Colors.white;
   static const Color _DARK_ORANGE = Color(0xffdd2c00);
+  static const Color _DARK_BLUE = Color(0xff174674);
+  static const Color _GOLDEN = Color(0xffEBAC2D);
+  static const Color _GREY = Color(0xff707070);
+  static const Color _RED = Color(0xffF83131);
+  static const Color _DARK_RED = Color(0xffCE0E12);
 
   // no need for extending color scheme.
   static const CustomColorScheme DARK_COLOR_SCHEME = CustomColorScheme(
-    primary: _DARk_GREY,
+    primary: _DARK_BLUE,
     brightness: Brightness.light,
-    primaryVariant: _DARk_GREY,
-    secondaryVariant: _DARK_ORANGE,
-    secondary: _DARK_ORANGE,
-    background: _DARk_GREY,
+    primaryVariant: _DARK_GREY,
+    secondaryVariant: _GREY_BLUE,
+    secondary: _DARK_GREY,
+    background: _WHITE,
     error: _DARK_ORANGE,
     onBackground: _WHITE,
     onError: _WHITE,
     onPrimary: _WHITE,
-    onSecondary: _DARk_GREY_X,
+    onSecondary: _WHITE,
     surface: _WHITE,
-    onSurface: _DARk_GREY_X,
+    onSurface: _DARK_GREY,
     icon: _WHITE,
     activeIcon: _DARK_ORANGE,
     inactiveIcon: _LIGHT_GREY,

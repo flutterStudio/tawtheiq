@@ -7,7 +7,7 @@ class TopBar extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       leading: Row(
-        children: [Icon(Icons.calendar_today_rounded), Text("22/7/2021")],
+        children: [Icon(Icons.calendar_today_rounded), const Text("22/7/2021")],
       ),
       leadingWidth: MediaQuery.of(context).size.width * 0.4,
       centerTitle: true,
