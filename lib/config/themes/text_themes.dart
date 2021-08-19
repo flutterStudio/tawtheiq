@@ -40,13 +40,13 @@ class AppTextTheme {
 }
 
 class TextStyles {
-  static TextStyle h1(BuildContext context) =>
+  static TextStyle? h1(BuildContext context) =>
       getTextStyle(context, FontType.h1);
 
   static TextStyle h2(BuildContext context) =>
       getTextStyle(context, FontType.h2);
 
-  static TextStyle h3(BuildContext context) =>
+  static TextStyle? h3(BuildContext context) =>
       getTextStyle(context, FontType.h3);
 
   static TextStyle h4(BuildContext context) =>

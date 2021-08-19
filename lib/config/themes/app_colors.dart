@@ -22,7 +22,7 @@ class AppColors {
     secondary: _DARK_GREY,
     background: _WHITE,
     error: _DARK_ORANGE,
-    onBackground: _WHITE,
+    onBackground: _GREY,
     onError: _WHITE,
     onPrimary: _WHITE,
     onSecondary: _WHITE,

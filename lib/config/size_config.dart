@@ -18,6 +18,8 @@ enum FontType {
   overline
 }
 
+// Icons sizes
+
 class SizeConfig {
   static const double REM_2_PIX = 16;
   static ScreenSize screenSize(BuildContext context) {
@@ -50,4 +52,11 @@ class SizeConfig {
         : _responsiveFontSize[screenSize(context)]?.elementAt(type.index);
     return REM_2_PIX * fontSize!;
   }
+}
+
+class ICONSIZE {
+  static const double SM = 18;
+  static const double MD = 24;
+  static const double LG = 36;
+  static const double XLG = 36;
 }
