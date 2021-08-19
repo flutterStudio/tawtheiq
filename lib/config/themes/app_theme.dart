@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:khandak/config/themes/app_colors.dart';
-import 'package:khandak/config/themes/text_themes.dart';
+import 'package:tawtheiq/config/themes/app_colors.dart';
+import 'package:tawtheiq/config/themes/text_themes.dart';
 
 enum AppTheme { dark, light }
 

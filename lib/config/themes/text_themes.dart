@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:khandak/config/size_config.dart';
-import 'package:khandak/config/themes/app_theme.dart';
+import 'package:tawtheiq/config/size_config.dart';
+import 'package:tawtheiq/config/themes/app_theme.dart';
 
 class AppTextTheme {
   static TextTheme getTextTheme(BuildContext context, AppTheme theme) {
