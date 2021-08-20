@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tawtheiq/view/mixins/main_content_mixin.dart';
+import 'package:tawtheiq/view/screen/overview/overview_section.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -22,40 +23,56 @@ class _MainScreenState extends State<MainScreen>
 
   @override
   Widget body() {
-    return Container(
-      child: Row(
-        children: [
-          Expanded(
-            flex: 1,
-            child: RotatedBox(
-              quarterTurns: 3,
-              child: TabBar(controller: controller, tabs: [
-                Text(
-                  "Details",
-                  style: Theme.of(context).textTheme.headline5?.copyWith(
-                      color: Theme.of(context).colorScheme.secondary),
-                ),
-                Text(
-                  "Statistics",
-                  style: Theme.of(context).textTheme.headline5?.copyWith(
-                      color: Theme.of(context).colorScheme.secondary),
-                ),
-                Text(
-                  "Overview",
-                  style: Theme.of(context).textTheme.headline5?.copyWith(
-                      color: Theme.of(context).colorScheme.secondary),
-                )
-              ]),
+    return Row(
+      children: [
+        Expanded(
+          flex: 1,
+          child: OrientationBuilder(
+            builder: (context, orientation) => RotatedBox(
+              quarterTurns: orientation == Orientation.landscape ? 0 : 3,
+              child: Flex(
+                direction: orientation == Orientation.landscape
+                    ? Axis.vertical
+                    : Axis.horizontal,
+                children: [
+                  Expanded(
+                    child: TabBar(controller: controller, tabs: [
+                      Text(
+                        "Details",
+                        style: Theme.of(context).textTheme.headline5?.copyWith(
+                            color: Theme.of(context).colorScheme.secondary),
+                      ),
+                      Text(
+                        "Statistics",
+                        style: Theme.of(context).textTheme.headline5?.copyWith(
+                            color: Theme.of(context).colorScheme.secondary),
+                      ),
+                      Text(
+                        "Overview",
+                        style: Theme.of(context).textTheme.headline5?.copyWith(
+                            color: Theme.of(context).colorScheme.secondary),
+                      )
+                    ]),
+                  ),
+                  // Expanded(
+                  //   child: Container(),
+                  //   flex: 1,
+                  // ),
+                ],
+              ),
             ),
           ),
-          Expanded(
-            flex: 4,
-            child: TabBarView(
-                controller: controller,
-                children: [Text("page1"), Text("page2"), Text("page3")]),
-          )
-        ],
-      ),
+        ),
+        Expanded(
+            flex: 6,
+            child: Container(
+              clipBehavior: Clip.none,
+              padding: const EdgeInsets.all(10),
+              child: TabBarView(
+                  controller: controller,
+                  children: [OverViewSection(), Text("page2"), Text("page3")]),
+            ))
+      ],
     );
   }
 }
