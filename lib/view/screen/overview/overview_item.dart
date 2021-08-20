@@ -35,6 +35,7 @@ class OverViewItem extends StatelessWidget {
           ],
           borderRadius: BorderRadius.circular(10)),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           SvgPicture.asset(
@@ -44,7 +45,8 @@ class OverViewItem extends StatelessWidget {
           ),
           Text(
             text,
-            style: Theme.of(context).textTheme.bodyText1?.copyWith(
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.bodyText2?.copyWith(
                 color:
                     filled ? Theme.of(context).colorScheme.background : color),
           ),

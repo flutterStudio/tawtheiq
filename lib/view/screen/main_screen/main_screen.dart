@@ -64,10 +64,10 @@ class _MainScreenState extends State<MainScreen>
           ),
         ),
         Expanded(
-            flex: 6,
+            flex: 8,
             child: Container(
               clipBehavior: Clip.none,
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: TabBarView(
                   controller: controller,
                   children: [OverViewSection(), Text("page2"), Text("page3")]),
