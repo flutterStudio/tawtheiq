@@ -8,10 +8,10 @@ class AppColors {
   static const Color _WHITE = Colors.white;
   static const Color _DARK_ORANGE = Color(0xffdd2c00);
   static const Color _DARK_BLUE = Color(0xff174674);
-  static const Color _GOLDEN = Color(0xffEBAC2D);
+  // static const Color _GOLDEN = Color(0xffEBAC2D);
   static const Color _GREY = Color(0xff707070);
-  static const Color _RED = Color(0xffF83131);
-  static const Color _DARK_RED = Color(0xffCE0E12);
+  // static const Color _RED = Color(0xffF83131);
+  // static const Color _DARK_RED = Color(0xffCE0E12);
 
   // no need for extending color scheme.
   static const CustomColorScheme DARK_COLOR_SCHEME = CustomColorScheme(
