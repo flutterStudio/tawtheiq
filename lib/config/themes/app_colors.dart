@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color _DARK_GREY = Color(0xFF232121);
+  static const Color _DARK_GREY = Color(0xFF707070);
   static const Color _GREY_BLUE = Color(0xFF174674);
-  static const Color _LIGHT_GREY = Color(0x33030303);
+  static const Color _LIGHT_GREY = Color(0xFFE1E5EB);
   static const Color _WHITE = Colors.white;
   static const Color _DARK_ORANGE = Color(0xffdd2c00);
   static const Color _DARK_BLUE = Color(0xff174674);
@@ -18,7 +18,7 @@ class AppColors {
     primary: _DARK_BLUE,
     brightness: Brightness.light,
     primaryVariant: _GREY_BLUE,
-    secondaryVariant: _DARK_GREY,
+    secondaryVariant: _LIGHT_GREY,
     secondary: _DARK_GREY,
     background: _WHITE,
     error: _DARK_ORANGE,
