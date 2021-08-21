@@ -4,11 +4,11 @@ class SpacerWidget extends StatelessWidget {
   final Axis _direction;
   final double? size;
 
-  const SpacerWidget.horizontal({Key? key, this.size = 10})
+  const SpacerWidget.horizontal({Key? key, this.size = 20})
       : _direction = Axis.horizontal,
         super(key: key);
 
-  const SpacerWidget.vertical({Key? key, this.size = 10})
+  const SpacerWidget.vertical({Key? key, this.size = 20})
       : _direction = Axis.vertical,
         super(key: key);
 

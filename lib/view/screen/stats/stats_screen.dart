@@ -60,7 +60,9 @@ class StatsScreen extends StatelessWidget {
               ],
             ),
           ),
-          SpacerWidget.vertical(),
+          SpacerWidget.vertical(
+            size: 20,
+          ),
           Padding(
               padding: const EdgeInsets.only(right: 15),
               child: Row(
