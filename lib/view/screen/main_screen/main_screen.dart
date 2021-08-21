@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tawtheiq/view/mixins/main_content_mixin.dart';
+import 'package:tawtheiq/view/screen/details/details_screen.dart';
 import 'package:tawtheiq/view/screen/overview/overview_section.dart';
+import 'package:tawtheiq/view/screen/stats/stats_screen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -68,9 +70,11 @@ class _MainScreenState extends State<MainScreen>
             child: Container(
               clipBehavior: Clip.none,
               padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: TabBarView(
-                  controller: controller,
-                  children: [OverViewSection(), Text("page2"), Text("page3")]),
+              child: TabBarView(controller: controller, children: [
+                OverViewSection(),
+                StatsScreen(),
+                DetailsSCreen()
+              ]),
             ))
       ],
     );

@@ -8,6 +8,7 @@ mixin MainContent<T extends StatefulWidget> on State<T> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        // backgroundColor: Theme.of(context).colorScheme.background,
         appBar: CustomTopBar(),
         bottomNavigationBar: CustomBottomNavigation(),
         body: body());
