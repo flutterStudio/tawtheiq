@@ -39,11 +39,17 @@ class StatsScreen extends StatelessWidget {
                   subTitle: "+20% Since Last Month",
                   value: 30,
                   bool: true),
+              Divider(
+                color: Theme.of(context).colorScheme.secondary,
+              ),
               StatsLineare(
                   text: "MOM Attende ( Last Month)",
                   subTitle: "+20% Since Last Month",
                   value: 30,
                   bool: true),
+              Divider(
+                color: Theme.of(context).colorScheme.secondary,
+              ),
               StatsLineare(
                   text: "MOM Attende ( Last Month)",
                   subTitle: "+20% Since Last Month",

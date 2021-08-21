@@ -28,14 +28,14 @@ class CircularProgress extends StatelessWidget {
           height: 10,
         ),
         CircularPercentIndicator(
-            radius: 75.0,
+            radius: 80,
             lineWidth: 10.0,
             animation: true,
-            percent: 0.7,
+            percent: value,
             backgroundColor: this.background ??
                 Theme.of(context).colorScheme.secondaryVariant,
             circularStrokeCap: CircularStrokeCap.round,
-            progressColor: Colors.purple,
+            progressColor: color,
             center: Text(
               "${(value * 100).round().toString()}%",
               style: TextStyle(fontSize: 12.0),
