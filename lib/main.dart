@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tawtheiq/view/screen/login/login_screen.dart';
 import 'package:tawtheiq/view/screen/main_screen/main_screen.dart';
 import 'package:tawtheiq/config/themes/app_theme.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       home: Builder(
         builder: (context) => Theme(
             data: ThemeConfig.change(context, AppTheme.dark),
-            child: MainScreen()),
+            child: LoginScreen()),
       ),
     );
   }

@@ -138,6 +138,7 @@ class SizeConfig {
 }
 
 class ICONSIZE {
+  static const double XSM = 14;
   static const double SM = 18;
   static const double MD = 24;
   static const double LG = 36;

@@ -12,4 +12,8 @@ class AppIcons {
   static const String ICON_SEARCH = "assets/icons/search.svg";
   static const String ICON_TASKS_LIST = "assets/icons/tasks_list.svg";
   static const String ICON_TODO_LIST = "assets/icons/todo_list.svg";
+  static const String ICON_GOOGLE = "assets/icons/google.svg";
+  static const String ICON_OFFICE = "assets/icons/office.svg";
+  static const String ICON_LINKEDIN = "assets/icons/linkedin.svg";
+  static const String ICON_APPLE = "assets/icons/apple.svg";
 }
