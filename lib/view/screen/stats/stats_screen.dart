@@ -32,30 +32,33 @@ class StatsScreen extends StatelessWidget {
                   ])
             ],
           ),
-          Column(
-            children: [
-              StatsLineare(
-                  text: "MOM Attende ( Last Month)",
-                  subTitle: "+20% Since Last Month",
-                  value: 30,
-                  bool: true),
-              Divider(
-                color: Theme.of(context).colorScheme.secondary,
-              ),
-              StatsLineare(
-                  text: "MOM Attende ( Last Month)",
-                  subTitle: "+20% Since Last Month",
-                  value: 30,
-                  bool: true),
-              Divider(
-                color: Theme.of(context).colorScheme.secondary,
-              ),
-              StatsLineare(
-                  text: "MOM Attende ( Last Month)",
-                  subTitle: "+20% Since Last Month",
-                  value: 30,
-                  bool: true),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(right: 30),
+            child: Column(
+              children: [
+                StatsLineare(
+                    text: "MOM Attende ( Last Month)",
+                    subTitle: "+20% Since Last Month",
+                    value: 30,
+                    bool: true),
+                Divider(
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
+                StatsLineare(
+                    text: "MOM Attende ( Last Month)",
+                    subTitle: "+20% Since Last Month",
+                    value: 30,
+                    bool: true),
+                Divider(
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
+                StatsLineare(
+                    text: "MOM Attende ( Last Month)",
+                    subTitle: "+20% Since Last Month",
+                    value: 30,
+                    bool: true),
+              ],
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -79,26 +82,28 @@ class StatsScreen extends StatelessWidget {
             ],
           ),
           SpacerWidget.vertical(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              CircularProgress(
-                title: "Attende",
-                color: Theme.of(context).colorScheme.primary,
-                value: .76,
-              ),
-              CircularProgress(
-                title: "Review",
-                color: Theme.of(context).colorScheme.primary,
-                value: .5,
-              ),
-              CircularProgress(
-                title: "Approve",
-                color: Theme.of(context).colorScheme.primary,
-                value: .6,
-              ),
-            ],
-          ),
+          Padding(
+              padding: const EdgeInsets.only(right: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  CircularProgress(
+                    title: "Attende",
+                    color: Theme.of(context).colorScheme.primary,
+                    value: .76,
+                  ),
+                  CircularProgress(
+                    title: "Review",
+                    color: Theme.of(context).colorScheme.primary,
+                    value: .5,
+                  ),
+                  CircularProgress(
+                    title: "Approve",
+                    color: Theme.of(context).colorScheme.primary,
+                    value: .6,
+                  ),
+                ],
+              )),
           SpacerWidget.vertical(),
           SizedBox(height: 300, child: StatsChart()),
         ],

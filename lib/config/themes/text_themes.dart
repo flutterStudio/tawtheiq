@@ -80,5 +80,22 @@ class TextStyles {
       getTextStyle(context, FontType.overline);
 
   static TextStyle getTextStyle(BuildContext context, FontType type) =>
-      TextStyle(fontSize: SizeConfig.fontSize(type, context));
+      TextStyle(
+          fontSize: SizeConfig.fontSize(type, context),
+          fontWeight: fontWeight(type));
+
+  static const Map<FontType, FontWeight> _fontWeights = {
+    FontType.h1: FontWeight.w300,
+    FontType.h2: FontWeight.w300,
+    FontType.h4: FontWeight.w400,
+    FontType.h5: FontWeight.w400,
+    FontType.h6: FontWeight.w500,
+    FontType.subtitle1: FontWeight.w400,
+    FontType.subtitle2: FontWeight.w500,
+    FontType.bodytext1: FontWeight.w400,
+    FontType.button: FontWeight.w500,
+    FontType.caption: FontWeight.w400,
+    FontType.overline: FontWeight.w400,
+  };
+  static FontWeight? fontWeight(FontType type) => _fontWeights[type];
 }
