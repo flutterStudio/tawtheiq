@@ -60,27 +60,6 @@ class StatsScreen extends StatelessWidget {
               ],
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("Actions Statistics",
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline5
-                      ?.copyWith(color: Theme.of(context).colorScheme.primary)),
-              DropdownButton(
-                  icon: Icon(Icons.keyboard_arrow_down_outlined),
-                  underline: Container(),
-                  items: [
-                    DropdownMenuItem(
-                        child: Text(
-                      "Last Month",
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                          color: Theme.of(context).colorScheme.secondary),
-                    ))
-                  ])
-            ],
-          ),
           SpacerWidget.vertical(),
           Padding(
               padding: const EdgeInsets.only(right: 15),
@@ -104,6 +83,28 @@ class StatsScreen extends StatelessWidget {
                   ),
                 ],
               )),
+          SpacerWidget.vertical(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Actions Statistics",
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline5
+                      ?.copyWith(color: Theme.of(context).colorScheme.primary)),
+              DropdownButton(
+                  icon: Icon(Icons.keyboard_arrow_down_outlined),
+                  underline: Container(),
+                  items: [
+                    DropdownMenuItem(
+                        child: Text(
+                      "Last Month",
+                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                          color: Theme.of(context).colorScheme.secondary),
+                    ))
+                  ])
+            ],
+          ),
           SpacerWidget.vertical(),
           SizedBox(height: 300, child: StatsChart()),
         ],

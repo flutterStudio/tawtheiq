@@ -23,7 +23,7 @@ class StatsLineare extends StatelessWidget {
       child: Row(
         children: [
           Text(value.round().toString(),
-              style: Theme.of(context).textTheme.headline2?.copyWith(
+              style: Theme.of(context).textTheme.headline3?.copyWith(
                     color: Theme.of(context).colorScheme.primary,
                   )),
           SizedBox(
@@ -33,7 +33,7 @@ class StatsLineare extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(text,
-                  style: Theme.of(context).textTheme.headline6?.copyWith(
+                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
                         color: Theme.of(context).colorScheme.secondary,
                       )),
               Text(text,
