@@ -8,7 +8,7 @@ enum RequestType { GET, POST, DELETE }
 
 class ApiService {
   static final ApiService _instance = ApiService._internal();
-  final String baseUrl = "https://api.openweathermap.org/data/2.5/";
+  final String baseUrl = "http://api.stg.tawtheiq.com/api/app/";
 
   factory ApiService() => _instance;
 

@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:tawtheiq/view/mixins/main_content_mixin.dart';
 import 'package:tawtheiq/view/screen/details/details_screen.dart';
+import 'package:tawtheiq/view/screen/main_screen/tab_bar_item.dart';
 import 'package:tawtheiq/view/screen/overview/overview_section.dart';
 import 'package:tawtheiq/view/screen/stats/stats_screen.dart';
+import 'package:tawtheiq/utils/extensions.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -13,6 +16,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen>
     with MainContent, TickerProviderStateMixin {
   TabController? controller;
+  ValueNotifier<int> _activeTab = ValueNotifier<int>(0);
 
   @override
   initState() {
@@ -20,8 +24,14 @@ class _MainScreenState extends State<MainScreen>
       length: 3,
       vsync: this,
     );
+    controller?.addListener(() {
+      setState(() {});
+    });
+
     super.initState();
   }
+
+  final List<String> _tabs = ["Overview", "Statistics", "Details"];
 
   @override
   Widget body() {
@@ -37,29 +47,20 @@ class _MainScreenState extends State<MainScreen>
                     ? Axis.vertical
                     : Axis.horizontal,
                 children: [
-                  Expanded(
-                    child: TabBar(controller: controller, tabs: [
-                      Text(
-                        "Details",
-                        style: Theme.of(context).textTheme.headline5?.copyWith(
-                            color: Theme.of(context).colorScheme.secondary),
-                      ),
-                      Text(
-                        "Statistics",
-                        style: Theme.of(context).textTheme.headline5?.copyWith(
-                            color: Theme.of(context).colorScheme.secondary),
-                      ),
-                      Text(
-                        "Overview",
-                        style: Theme.of(context).textTheme.headline5?.copyWith(
-                            color: Theme.of(context).colorScheme.secondary),
-                      )
-                    ]),
-                  ),
-                  // Expanded(
-                  //   child: Container(),
-                  //   flex: 1,
-                  // ),
+                  ValueListenableBuilder<int>(
+                    valueListenable: _activeTab,
+                    builder: (context, value, _) => Expanded(
+                      child: TabBar(
+                          onTap: (index) {
+                            _activeTab.value = index;
+                          },
+                          controller: controller,
+                          tabs: _tabs
+                              .mapIndexed((e, i) =>
+                                  TabBarItem(active: i == value, text: e))
+                              .toList()),
+                    ),
+                  )
                 ],
               ),
             ),

@@ -36,3 +36,9 @@ class Settings {
     409: "Can not Delete a warehouse that has a product group.",
   };
 }
+
+enum DataStatus { inProgress, succeed, faild, timeout, none }
+
+enum NetworkState { connected, disconnected, none }
+
+enum ErrorType { network, emptyResponse, other, none }
