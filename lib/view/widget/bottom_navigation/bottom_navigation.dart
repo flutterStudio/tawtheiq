@@ -67,6 +67,7 @@ class CustomBottomNavigation extends StatelessWidget {
                     color: Theme.of(context).colorScheme.primary),
                 child: SVGButton(
                   asset: AppIcons.ICON_ADD_TASK,
+                  size: ICONSIZE.SM,
                   onClick: () {},
                   color: Theme.of(context).colorScheme.onPrimary,
                 ),

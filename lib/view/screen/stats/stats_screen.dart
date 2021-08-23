@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tawtheiq/config/themes/app_colors.dart';
 import 'package:tawtheiq/view/screen/stats/circular_progress.dart';
 import 'package:tawtheiq/view/screen/stats/stats_linear.dart';
 import 'package:tawtheiq/view/screen/stats/stats_pie_chart.dart';
@@ -75,12 +76,12 @@ class StatsScreen extends StatelessWidget {
                   ),
                   CircularProgress(
                     title: "Review",
-                    color: Theme.of(context).colorScheme.primary,
+                    color: AppColors.RED,
                     value: .5,
                   ),
                   CircularProgress(
                     title: "Approve",
-                    color: Theme.of(context).colorScheme.primary,
+                    color: AppColors.GREEN,
                     value: .6,
                   ),
                 ],
