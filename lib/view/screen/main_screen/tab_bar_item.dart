@@ -14,11 +14,11 @@ class TabBarItem extends StatelessWidget {
       style: active
           ? Theme.of(context)
               .textTheme
-              .headline4
+              .headline5
               ?.copyWith(color: Theme.of(context).colorScheme.primary)
           : Theme.of(context)
               .textTheme
-              .headline5
+              .bodyText1
               ?.copyWith(color: Theme.of(context).colorScheme.secondary),
     );
   }

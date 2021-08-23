@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tawtheiq/config/themes/app_theme.dart';
-import 'package:tawtheiq/view/screen/login/login_screen.dart';
 import 'package:tawtheiq/view/screen/main_screen/main_screen.dart';
 
 void main() {

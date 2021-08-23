@@ -32,52 +32,62 @@ class _MainScreenState extends State<MainScreen>
 
   @override
   Widget body() {
-    return Row(
-      children: [
-        Expanded(
-          flex: 1,
-          child: OrientationBuilder(
-            builder: (context, orientation) => RotatedBox(
-              quarterTurns: orientation == Orientation.landscape ? 0 : 3,
-              child: Flex(
-                direction: orientation == Orientation.landscape
-                    ? Axis.vertical
-                    : Axis.horizontal,
-                children: [
-                  ValueListenableBuilder<int>(
-                    valueListenable: _activeTab,
-                    builder: (context, value, _) => Expanded(
-                      child: TabBar(
-                          onTap: (index) {
-                            _activeTab.value = index;
-                          },
-                          controller: controller,
-                          tabs: _tabs
-                              .mapIndexed((e, i) =>
-                                  TabBarItem(active: i == value, text: e))
-                              .toList()),
+    return OrientationBuilder(
+        builder: (context, orientation) => Flex(
+              direction: orientation == Orientation.landscape
+                  ? Axis.vertical
+                  : Axis.horizontal,
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: RotatedBox(
+                    quarterTurns: orientation == Orientation.landscape ? 0 : 3,
+                    child: Flex(
+                      direction: orientation == Orientation.landscape
+                          ? Axis.vertical
+                          : Axis.horizontal,
+                      children: [
+                        ValueListenableBuilder<int>(
+                          valueListenable: _activeTab,
+                          builder: (context, value, _) => Expanded(
+                            flex: 3,
+                            child: TabBar(
+                                onTap: (index) {
+                                  _activeTab.value = index;
+                                },
+                                controller: controller,
+                                labelPadding: EdgeInsets.zero,
+                                indicatorPadding: EdgeInsets.zero,
+                                indicatorColor: Colors.transparent,
+                                tabs: _tabs
+                                    .mapIndexed((e, i) =>
+                                        TabBarItem(active: i == value, text: e))
+                                    .toList()),
+                          ),
+                        ),
+                        Expanded(
+                          child: Container(),
+                          flex: 1,
+                        ),
+                      ],
                     ),
-                  )
-                ],
-              ),
-            ),
-          ),
-        ),
-        Expanded(
-            flex: 8,
-            child: Container(
-              clipBehavior: Clip.none,
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: TabBarView(
-                  physics: NeverScrollableScrollPhysics(),
-                  controller: controller,
-                  children: [
-                    OverViewSection(),
-                    StatsScreen(),
-                    DetailsSCreen()
-                  ]),
-            ))
-      ],
-    );
+                  ),
+                ),
+                Expanded(
+                    flex: 8,
+                    child: Container(
+                      clipBehavior: Clip.none,
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: TabBarView(
+                          physics: NeverScrollableScrollPhysics(),
+                          controller: controller,
+                          children: [
+                            OverViewSection(),
+                            StatsScreen(),
+                            DetailsSCreen()
+                          ]),
+                    ))
+              ],
+            ));
   }
 }
