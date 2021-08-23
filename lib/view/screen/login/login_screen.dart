@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tawtheiq/common/settings.dart';
+import 'package:tawtheiq/common/types.dart';
 import 'package:tawtheiq/config/size_config.dart';
+import 'package:tawtheiq/view/screen/main_screen/main_screen.dart';
 import 'package:tawtheiq/view/widget/spacer_widget.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -70,25 +72,40 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SpacerWidget.vertical(),
                 _button(
-                    context,
-                    "Sign in",
-                    Theme.of(context).colorScheme.primary,
-                    Theme.of(context).colorScheme.onPrimary),
+                  context,
+                  "Sign in",
+                  Theme.of(context).colorScheme.primary,
+                  Theme.of(context).colorScheme.onPrimary,
+                  onPress: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => MainScreen()));
+                  },
+                ),
                 _button(
-                    context,
-                    "Sign up",
-                    Theme.of(context).colorScheme.onPrimary,
-                    Theme.of(context).colorScheme.onPrimary.withOpacity(0.5),
-                    border: Theme.of(context).colorScheme.onPrimary),
+                  context,
+                  "Sign up",
+                  Theme.of(context).colorScheme.onPrimary,
+                  Theme.of(context).colorScheme.onPrimary.withOpacity(0.5),
+                  border: Theme.of(context).colorScheme.onPrimary,
+                  onPress: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => MainScreen()));
+                  },
+                ),
                 SpacerWidget.vertical(
                   size: 5,
                 ),
-                Text(
-                  "OR Sign in with",
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.caption?.copyWith(
-                        color: Theme.of(context).colorScheme.onPrimary,
-                      ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "OR Sign in with",
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.caption?.copyWith(
+                            color: Theme.of(context).colorScheme.onPrimary,
+                          ),
+                    ),
+                  ],
                 ),
                 SpacerWidget.vertical(
                   size: 5,
@@ -169,7 +186,7 @@ class LoginScreen extends StatelessWidget {
   }
 
   Row _button(BuildContext context, String text, Color color, Color background,
-      {Color? border, String? icon}) {
+      {Color? border, String? icon, VoidFunction? onPress}) {
     return Row(
       children: [
         Expanded(
@@ -187,7 +204,7 @@ class LoginScreen extends StatelessWidget {
                   );
                 }),
               ),
-              onPressed: () {},
+              onPressed: onPress ?? () {},
               child: Row(
                 children: [
                   Expanded(child: Container()),
