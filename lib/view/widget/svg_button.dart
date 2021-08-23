@@ -18,8 +18,8 @@ class SVGButton extends StatelessWidget {
         onTap: this.onClick,
         child: SvgPicture.asset(
           this.asset,
-          width: size ?? ICONSIZE.SM,
-          height: size ?? ICONSIZE.SM,
+          width: size ?? ICONSIZE.MD,
+          height: size ?? ICONSIZE.MD,
           allowDrawingOutsideViewBox: false,
           fit: BoxFit.scaleDown,
           color: color ?? Theme.of(context).colorScheme.secondary,

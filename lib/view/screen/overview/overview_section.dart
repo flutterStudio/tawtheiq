@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:tawtheiq/common/settings.dart';
+import 'package:tawtheiq/config/themes/app_colors.dart';
 import 'package:tawtheiq/view/screen/overview/overview_item.dart';
 import 'package:tawtheiq/view/screen/overview/text_with_underline.dart';
 
@@ -33,11 +34,11 @@ class OverViewSection extends StatelessWidget {
                 ),
                 TextWithUnderline(
                     text: "You Have 3 MOMs Pending review For Today",
-                    lineColor: Colors.accents[1],
+                    lineColor: AppColors.GOLDEN,
                     lineWidth: 3),
                 TextWithUnderline(
                     text: "You Have 2 MOMs pending approval For Today",
-                    lineColor: Colors.accents[1],
+                    lineColor: AppColors.GOLDEN,
                     lineWidth: 3),
               ],
             ),
@@ -58,43 +59,43 @@ class OverViewSection extends StatelessWidget {
             children: <Widget>[
               OverViewItem(
                   filled: false,
-                  color: Colors.accents[1],
+                  color: AppColors.GOLDEN,
                   text: "You have postponded  moms",
                   count: "3",
                   icon: AppIcons.ICON_CLOCK),
               OverViewItem(
                   filled: true,
-                  color: Colors.accents[1],
+                  color: Theme.of(context).colorScheme.secondary,
                   text: "You have postponded  moms",
                   count: "3",
                   icon: AppIcons.ICON_TASKS_LIST),
               OverViewItem(
                   filled: true,
-                  color: Colors.accents[1],
+                  color: AppColors.RED,
                   text: "You have postponded  moms",
                   count: "3",
                   icon: AppIcons.ICON_DOC_SEARCH),
               OverViewItem(
                   filled: true,
-                  color: Colors.accents[1],
+                  color: AppColors.GOLDEN,
                   text: "You have postponded  moms",
                   count: "3",
                   icon: AppIcons.ICON_DOC_SEARCH_FAILD),
               OverViewItem(
                   filled: true,
-                  color: Colors.accents[1],
+                  color: Theme.of(context).colorScheme.secondary,
                   text: "You have postponded  moms",
                   count: "3",
                   icon: AppIcons.ICON_TODO_LIST),
               OverViewItem(
                   filled: true,
-                  color: Colors.accents[1],
+                  color: AppColors.RED,
                   text: "You have postponded  moms",
                   count: "3",
                   icon: AppIcons.ICON_TODO_LIST),
               OverViewItem(
                   filled: true,
-                  color: Colors.accents[1],
+                  color: AppColors.GREEN,
                   text: "You have postponded  moms",
                   count: "3",
                   icon: AppIcons.ICON_TODO_LIST),

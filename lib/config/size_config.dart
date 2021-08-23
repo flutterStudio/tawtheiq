@@ -142,5 +142,5 @@ class ICONSIZE {
   static const double SM = 18;
   static const double MD = 24;
   static const double LG = 36;
-  static const double XLG = 36;
+  static const double XLG = 48;
 }

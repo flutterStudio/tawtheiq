@@ -16,6 +16,7 @@ class AppIcons {
   static const String ICON_OFFICE = "assets/icons/office.svg";
   static const String ICON_LINKEDIN = "assets/icons/linkedin.svg";
   static const String ICON_APPLE = "assets/icons/apple.svg";
+  static const String ICON_CALENDAR = "assets/icons/calendar.svg";
 }
 
 /// Where all app static settings should be set.

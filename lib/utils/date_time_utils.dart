@@ -1,7 +1,7 @@
 class DateTimeUtils {
   /// Convert the given [dateTime] to the format `2 NOV 2020`.
-  static String formatDate(DateTime dateTime) =>
-      "${dateTime.day.toString()} ${abbrevMonthsName(dateTime.month)} ${dateTime.year.toString()}";
+  static String formatDate(DateTime dateTime, {String separator = " "}) =>
+      "${dateTime.day.toString()}$separator${dateTime.month}$separator${dateTime.year.toString()}";
 
   static String? abbrevMonthsName(int month) =>
       _ABBREVIATED_MONTHS_FULL_NAMES[month];

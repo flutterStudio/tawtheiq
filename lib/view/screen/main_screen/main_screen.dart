@@ -24,9 +24,6 @@ class _MainScreenState extends State<MainScreen>
       length: 3,
       vsync: this,
     );
-    controller?.addListener(() {
-      setState(() {});
-    });
 
     super.initState();
   }
@@ -71,11 +68,14 @@ class _MainScreenState extends State<MainScreen>
             child: Container(
               clipBehavior: Clip.none,
               padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: TabBarView(controller: controller, children: [
-                OverViewSection(),
-                StatsScreen(),
-                DetailsSCreen()
-              ]),
+              child: TabBarView(
+                  physics: NeverScrollableScrollPhysics(),
+                  controller: controller,
+                  children: [
+                    OverViewSection(),
+                    StatsScreen(),
+                    DetailsSCreen()
+                  ]),
             ))
       ],
     );
